@@ -3,6 +3,7 @@ import "./DeliveryCollections.css";
 import NextArrow from "../../Common/Corousel/nextArrow";
 import PrevArrow from "../../Common/Corousel/prevArraow";
 import Slider from "react-slick";
+import DeliveryItem from "./DeliveryItem";
 
 const deliveryItems = [
   {
@@ -94,7 +95,7 @@ const DeliveryCollections = () => {
         <div className="collection-title">Eat what makes you Happy</div>
         <Slider {...settings}>
             {deliveryItems.map((item) => {
-                return <img src={item.cover} />
+                return <DeliveryItem item={item} />
             })}
         </Slider>
       </div>
