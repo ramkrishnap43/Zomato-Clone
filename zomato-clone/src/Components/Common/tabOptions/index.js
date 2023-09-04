@@ -1,11 +1,12 @@
 import React from "react";
 import "./tabOptions.css";
 
+
 const tabs = [
   {
     id: 1,
     name: "Delivery",
-    acyive_img:
+    active_img:
       "https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png?output-format=webp",
     backdrop: "FCEEC0",
     inactive_img:
@@ -14,7 +15,7 @@ const tabs = [
   {
     id: 2,
     name: "Dining Out",
-    acyive_img:
+    active_img:
       "https://b.zmtcdn.com/data/o2_assets/30fa0a844f3ba82073e5f78c65c18b371616149662.png?output-format=webp",
     backdrop: "#E5F3F3",
     inactive_img:
@@ -23,7 +24,7 @@ const tabs = [
   {
     id: 3,
     name: "Nightlife",
-    acyive_img:
+    active_img:
       "https://b.zmtcdn.com/data/o2_assets/855687dc64a5e06d737dae45b7f6a13b1616149818.png",
     backdrop: "#EDf4FF",
     inactive_img:
@@ -40,11 +41,11 @@ const TabOptions = ({ activeTab, setActiveTab }) => {
             <div
               onClick={() => setActiveTab(tab.name)}
               className={`tab-item absolute-center cur-po ${
-                activeTab === tab.name
-              } && "active-tab"`}
+                activeTab === tab.name && 'active-tab'
+              } `}
             >
               <div
-                className="tab-image-container absolutr-center"
+                className="tab-image-container absolute-center"
                 style={{
                   backgroundColor: `${
                     activeTab === tab.name ? tab.backdrop : ""
@@ -55,7 +56,7 @@ const TabOptions = ({ activeTab, setActiveTab }) => {
                   className="tab-image"
                   alt={tab.name}
                   src={
-                    activeTab === tab.name ? tab.acyive_img : tab.inactive_img
+                    activeTab === tab.name ? tab.active_img : tab.inactive_img
                   }
                 />
               </div>
