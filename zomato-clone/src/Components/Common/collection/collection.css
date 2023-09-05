@@ -50,7 +50,12 @@
     color: var(--primary-bg);
 }
 .collection-card-subtitle{
-    
+    display: flex;
+    color: var(--primary-bg);
+    position: absolute;
+    left: 16px;
+    bottom: 10px;
+    font-size: 14px;
 }
 
 

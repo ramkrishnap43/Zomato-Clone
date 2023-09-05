@@ -1,7 +1,9 @@
-import React from 'react'
-import "./DiningOut.css"
-import Collection from '../Common/collection';
-
+import React from "react";
+import "./DiningOut.css";
+import Collection from "../Common/collection";
+import { diningOut } from "../../data/diningOut";
+import Filters from "../Common/Filters";
+import ExploreSection from "../Common/exploreSection";
 
 const collectionList = [
   {
@@ -14,7 +16,8 @@ const collectionList = [
   {
     id: 2,
     title: "12 Best Insta-worthy Places",
-    cover:"https://b.zmtcdn.com/data/collections/fbe01413b99e6a071af5211d569e7ab6_1691566585.jpeg",
+    cover:
+      "https://b.zmtcdn.com/data/collections/fbe01413b99e6a071af5211d569e7ab6_1691566585.jpeg",
     places: "11 Places",
   },
   {
@@ -61,12 +64,47 @@ const collectionList = [
   },
 ];
 
+const diningFilters = [
+  {
+    id: 1,
+    icon: <i className="fi fi-rr-settings-sliders absolute-center"></i>,
+    title: "Filters",
+  },
+  {
+    id: 2,
+    title: "Rating: 4.0+",
+  },
+  {
+    id: 3,
+    title: "Safe and Hygienic",
+  },
+  {
+    id: 4,
+    title: "Pure Veg",
+  },
+  {
+    id: 5,
+    title: "Delivery Time",
+    icon: <i className="fi fi-rr-apps-sort absolute-center"></i>,
+  },
+  {
+    id: 6,
+    title: "Great Offers",
+  },
+];
+
+const diningList = diningOut;
+
 const DiningOut = () => {
   return (
     <div>
       <Collection list={collectionList} />
+      <div className="max-width">
+        <Filters filtersList={diningFilters} />
+      </div>
+      <ExploreSection  list={diningList} collectionName="Dining-Out Restaurant in Pune" />
     </div>
-  )
-}
+  );
+};
 
-export default DiningOut
+export default DiningOut;
